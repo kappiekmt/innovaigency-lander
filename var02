@@ -793,31 +793,6 @@
 </section>
 
 <!-- ══════════════════════════════════════════
-     APPLICATION — TYPEFORM
-══════════════════════════════════════════ -->
-<section id="apply" class="section">
-  <div class="container">
-    <span class="label">Aanvragen</span>
-    <h2>Vraag je strategiegesprek aan</h2>
-    <p>Vul de korte vragenlijst in. We beoordelen je aanvraag en nodigen je uit als je past.</p>
-
-    <ul class="apply-bullets">
-      <li>Kosteloos en vrijblijvend</li>
-      <li>Duurt maximaal 30 minuten</li>
-      <li>Je krijgt direct een helder beeld van wat mogelijk is</li>
-      <li>Alleen geschikte kandidaten worden uitgenodigd</li>
-    </ul>
-
-    <div class="typeform-wrap">
-      <div data-tf-live="01KN5CE48X9KH9Y6VN5FK1AYMV"></div>
-      <script src="//embed.typeform.com/next/embed.js"></script>
-    </div>
-
-    <p class="form-note">Na het invullen ontvang je binnen 24 uur een bevestiging. Je boekt direct een gesprek als je door de selectie komt.</p>
-  </div>
-</section>
-
-<!-- ══════════════════════════════════════════
      TESTIMONIALS
 ══════════════════════════════════════════ -->
 <section id="testimonials" class="section">
@@ -843,6 +818,31 @@
       </div>
 
     </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     APPLICATION — TYPEFORM
+══════════════════════════════════════════ -->
+<section id="apply" class="section">
+  <div class="container">
+    <span class="label">Aanvragen</span>
+    <h2>Vraag je strategiegesprek aan</h2>
+    <p>Vul de korte vragenlijst in. We beoordelen je aanvraag en nodigen je uit als je past.</p>
+
+    <ul class="apply-bullets">
+      <li>Kosteloos en vrijblijvend</li>
+      <li>Duurt maximaal 30 minuten</li>
+      <li>Je krijgt direct een helder beeld van wat mogelijk is</li>
+      <li>Alleen geschikte kandidaten worden uitgenodigd</li>
+    </ul>
+
+    <div class="typeform-wrap">
+      <div data-tf-live="01KN5CE48X9KH9Y6VN5FK1AYMV"></div>
+      <script src="//embed.typeform.com/next/embed.js"></script>
+    </div>
+
+    <p class="form-note">Na het invullen ontvang je binnen 24 uur een bevestiging. Je boekt direct een gesprek als je door de selectie komt.</p>
   </div>
 </section>
 
