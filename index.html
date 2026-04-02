@@ -927,6 +927,35 @@
      FAQ ACCORDION JS
 ══════════════════════════════════════════ -->
 <script>
+  // ── Config loader ─────────────────────────────────────────
+  (function () {
+    try {
+      const cfg = JSON.parse(localStorage.getItem('innovaigency_config') || '{}');
+      const setText = (sel, val) => { if (!val) return; const el = document.querySelector(sel); if (el) el.innerHTML = val; };
+      setText('nav a.btn-primary',        cfg.navCta);
+      setText('#hero .label',             cfg.heroLabel);
+      setText('#hero h1',                 cfg.heroHeadline);
+      setText('#hero .sub',               cfg.heroSub);
+      setText('#hero a.btn-primary.btn-lg', cfg.heroCta);
+      setText('.hero-note',               cfg.heroNote);
+      setText('.proof-text',              cfg.proofText);
+      const nums  = document.querySelectorAll('.trust-stat .number');
+      const descs = document.querySelectorAll('.trust-stat .desc');
+      if (cfg.stat1Number) nums[0].innerHTML  = cfg.stat1Number;
+      if (cfg.stat1Desc)   descs[0].innerHTML = cfg.stat1Desc;
+      if (cfg.stat2Number) nums[1].innerHTML  = cfg.stat2Number;
+      if (cfg.stat2Desc)   descs[1].innerHTML = cfg.stat2Desc;
+      if (cfg.stat3Number) nums[2].innerHTML  = cfg.stat3Number;
+      if (cfg.stat3Desc)   descs[2].innerHTML = cfg.stat3Desc;
+      const players = document.querySelectorAll('wistia-player');
+      if (cfg.mainVideoId       && players[0]) players[0].setAttribute('media-id', cfg.mainVideoId);
+      if (cfg.testimonialVideoId && players[1]) players[1].setAttribute('media-id', cfg.testimonialVideoId);
+      if (cfg.typeformId) { const tf = document.querySelector('[data-tf-live]'); if (tf) tf.setAttribute('data-tf-live', cfg.typeformId); }
+      if (cfg.kvkNumber) { const k = document.querySelector('footer a:last-child'); if (k) k.textContent = 'KVK: ' + cfg.kvkNumber; }
+    } catch (e) {}
+  })();
+
+  // ── FAQ accordion ─────────────────────────────────────────
   document.querySelectorAll('.faq-q').forEach(btn => {
     btn.addEventListener('click', () => {
       const item = btn.closest('.faq-item');
