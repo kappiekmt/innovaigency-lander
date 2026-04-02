@@ -10,7 +10,9 @@
   <!-- Wistia -->
   <script src="https://fast.wistia.com/player.js" async></script>
   <script src="https://fast.wistia.com/embed/bzkzdfgl5g.js" async type="module"></script>
-  <style>wistia-player[media-id='bzkzdfgl5g']:not(:defined){background:center/contain no-repeat url('https://fast.wistia.com/embed/medias/bzkzdfgl5g/swatch');display:block;filter:blur(5px);padding-top:56.25%;}</style>
+  <script src="https://fast.wistia.com/embed/4eda68ytaw.js" async type="module"></script>
+  <style>wistia-player[media-id='bzkzdfgl5g']:not(:defined){background:center/contain no-repeat url('https://fast.wistia.com/embed/medias/bzkzdfgl5g/swatch');display:block;filter:blur(5px);padding-top:56.25%;}
+  wistia-player[media-id='4eda68ytaw']:not(:defined){background:center/contain no-repeat url('https://fast.wistia.com/embed/medias/4eda68ytaw/swatch');display:block;filter:blur(5px);padding-top:56.25%;}</style>
   <style>
     /* ─── Reset & Base ─────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -449,6 +451,74 @@
       letter-spacing: .02em;
     }
 
+    /* ─── TESTIMONIALS ─────────────────────────────────────── */
+    #testimonials { text-align: center; }
+    #testimonials h2 { margin-bottom: 12px; }
+    #testimonials > .container > p { max-width: 460px; margin: 0 auto 56px; }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      text-align: left;
+    }
+
+    .testimonial-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .testimonial-video {
+      width: 100%;
+    }
+
+    .testimonial-video wistia-player {
+      display: block;
+      width: 100%;
+    }
+
+    .testimonial-meta {
+      padding: 20px 24px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .testimonial-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--accent-dim);
+      border: 1px solid rgba(108,0,238,.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .testimonial-name {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: -.01em;
+    }
+
+    .testimonial-role {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    @media (max-width: 640px) {
+      .testimonial-grid { grid-template-columns: 1fr; }
+    }
+
     /* ─── OBJECTIONS ───────────────────────────────────────── */
     #objections { background: var(--surface); }
     #objections h2 { margin-bottom: 48px; }
@@ -744,6 +814,35 @@
     </div>
 
     <p class="form-note">Na het invullen ontvang je binnen 24 uur een bevestiging. Je boekt direct een gesprek als je door de selectie komt.</p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     TESTIMONIALS
+══════════════════════════════════════════ -->
+<section id="testimonials" class="section">
+  <div class="container">
+    <span class="label">Resultaten</span>
+    <h2>Wat klanten zeggen</h2>
+    <p>Geen verzonnen quotes. Gewoon mensen die het systeem gebruiken.</p>
+
+    <div class="testimonial-grid">
+
+      <!-- Frank -->
+      <div class="testimonial-card">
+        <div class="testimonial-video">
+          <wistia-player media-id="4eda68ytaw" aspect="1.7777777777777777"></wistia-player>
+        </div>
+        <div class="testimonial-meta">
+          <div class="testimonial-avatar">F</div>
+          <div>
+            <div class="testimonial-name">Frank</div>
+            <div class="testimonial-role">Eigenaar · Zitcomfort</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
 
