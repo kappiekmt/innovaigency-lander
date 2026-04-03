@@ -177,6 +177,12 @@
       pointer-events: none;
     }
 
+    /* ensure hero content sits above spotlight & grid layers */
+    #hero .container {
+      position: relative;
+      z-index: 2;
+    }
+
     /* ─── SPOTLIGHT ───────────────────────────────────────── */
     @keyframes spotlight {
       0%   { opacity: 0; transform: translate(-72%, -62%) scale(.5); }
