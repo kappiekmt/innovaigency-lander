@@ -1079,7 +1079,7 @@
       const players = document.querySelectorAll('wistia-player');
       if (cfg.mainVideoId       && players[0]) players[0].setAttribute('media-id', cfg.mainVideoId);
       if (cfg.testimonialVideoId && players[1]) players[1].setAttribute('media-id', cfg.testimonialVideoId);
-      if (cfg.typeformId) { const tf = document.querySelector('[data-tf-live]'); if (tf) tf.setAttribute('data-tf-live', cfg.typeformId); }
+      if (cfg.typeformId) { document.querySelectorAll('[data-tf-live]').forEach(tf => tf.setAttribute('data-tf-live', cfg.typeformId)); }
       if (cfg.kvkNumber) { const k = document.querySelector('footer a:last-child'); if (k) k.textContent = 'KVK: ' + cfg.kvkNumber; }
     } catch (e) {}
   })();
