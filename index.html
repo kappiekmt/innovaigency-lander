@@ -177,6 +177,32 @@
       pointer-events: none;
     }
 
+    /* ─── SPOTLIGHT ───────────────────────────────────────── */
+    @keyframes spotlight {
+      0%   { opacity: 0; transform: translate(-72%, -62%) scale(.5); }
+      100% { opacity: 1; transform: translate(-50%, -40%) scale(1); }
+    }
+
+    .spotlight {
+      pointer-events: none;
+      position: absolute;
+      z-index: 1;
+      height: 169%;
+      width: 138%;
+      top: -160px;
+      left: 0;
+      opacity: 0;
+      animation: spotlight 2s ease forwards;
+    }
+
+    @media (min-width: 768px) {
+      .spotlight {
+        left: 240px;
+        top: -80px;
+        width: 84%;
+      }
+    }
+
     #hero h1 {
       max-width: 660px;
       margin: 0 auto 20px;
