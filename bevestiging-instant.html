@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gesprek ingepland — Innovaigency</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet" />
+  <!-- Meta Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1246322456954758');
+    fbq('track', 'PageView');
+    fbq('track', 'Lead');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1246322456954758&ev=Lead&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel -->
+  <!-- Wistia -->
+  <script src="https://fast.wistia.com/player.js" async></script>
+  <script src="https://fast.wistia.com/embed/r3xb3oxmjf.js" async type="module"></script>
+  <style>wistia-player[media-id='r3xb3oxmjf']:not(:defined){background:center/contain no-repeat url('https://fast.wistia.com/embed/medias/r3xb3oxmjf/swatch');display:block;filter:blur(5px);padding-top:56.25%;}</style>
+  <script src="https://fast.wistia.com/embed/BREAKOUT_VIDEO_1_ID.js"  async type="module"></script>
+  <script src="https://fast.wistia.com/embed/BREAKOUT_VIDEO_2_ID.js"  async type="module"></script>
+  <script src="https://fast.wistia.com/embed/BREAKOUT_VIDEO_3_ID.js"  async type="module"></script>
+  <script src="https://fast.wistia.com/embed/BREAKOUT_VIDEO_4_ID.js"  async type="module"></script>
+  <style>
+    /* ─── Wistia placeholders ──────────────────────────────── */
+    wistia-player:not(:defined) {
+      background: center/contain no-repeat #111;
+      display: block;
+      filter: blur(5px);
+      padding-top: 56.25%;
+    }
+
+    /* ─── Reset & Base ─────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:          #080808;
+      --surface:     #111111;
+      --surface-2:   #1a1a1a;
+      --border:      rgba(255,255,255,.08);
+      --border-soft: rgba(255,255,255,.05);
+      --white:       #ffffff;
+      --muted:       #888888;
+      --subtle:      #555555;
+      --accent:      #6C00EE;
+      --accent-dim:  rgba(108,0,238,.18);
+      --accent-glow: rgba(108,0,238,.35);
+      --green:       #16a34a;
+      --green-dim:   rgba(22,163,74,.15);
+      --radius:      10px;
+      --max:         760px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--white);
+      font-size: 16px;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    .section        { padding: 96px 0; }
+    .section--tight { padding: 64px 0; }
+    .section + .section,
+    .section--tight + .section,
+    .section + .section--tight { border-top: 1px solid var(--border-soft); }
+
+    .label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+    .label::before {
+      content: '';
+      display: inline-block;
+      width: 16px; height: 1px;
+      background: var(--accent);
+    }
+
+    h1, h2, h3 {
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -.03em;
+      color: var(--white);
+    }
+    h1 { font-size: clamp(30px, 4.5vw, 48px); }
+    h2 { font-size: clamp(24px, 3.5vw, 36px); }
+    h3 { font-size: 17px; font-weight: 700; letter-spacing: -.01em; }
+    p  { color: var(--muted); line-height: 1.8; }
+
+    /* ─── NAV ──────────────────────────────────────────────── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(8,8,8,.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 28px;
+      height: 62px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 17px;
+      font-weight: 900;
+      letter-spacing: -.05em;
+      color: var(--white);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .logo svg { flex-shrink: 0; }
+    .logo span { color: var(--accent); }
+
+    .nav-status {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--muted);
+    }
+    .nav-status .dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: #22c55e;
+      box-shadow: 0 0 8px rgba(34,197,94,.6);
+    }
+
+    /* ─── BLOCK 1: OPENING ─────────────────────────────────── */
+    #opening {
+      padding: 72px 0 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #opening::before {
+      content: '';
+      position: absolute;
+      top: -100px; left: 50%;
+      transform: translateX(-50%);
+      width: 500px; height: 500px;
+      background: radial-gradient(ellipse at center, rgba(34,197,94,.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .confirm-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 20px;
+      background: var(--green-dim);
+      border: 1px solid rgba(22,163,74,.3);
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #4ade80;
+      letter-spacing: .04em;
+      margin-bottom: 28px;
+    }
+
+    #opening h1 {
+      max-width: 600px;
+      margin: 0 auto 16px;
+    }
+
+    #opening .sub {
+      font-size: 17px;
+      max-width: 480px;
+      margin: 0 auto 40px;
+      color: var(--muted);
+    }
+
+    /* ── Appointment card ── */
+    .appt-card {
+      max-width: 480px;
+      margin: 0 auto;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .appt-card-header {
+      padding: 18px 28px;
+      background: var(--accent-dim);
+      border-bottom: 1px solid rgba(108,0,238,.2);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    .appt-card-body {
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .appt-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .appt-icon {
+      width: 34px; height: 34px;
+      border-radius: 8px;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+      flex-shrink: 0;
+    }
+
+    .appt-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--subtle);
+      margin-bottom: 3px;
+    }
+
+    .appt-value {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--white);
+      line-height: 1.4;
+    }
+
+    .appt-divider {
+      height: 1px;
+      background: var(--border-soft);
+    }
+
+    .whatsapp-note {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 16px 20px;
+      background: rgba(37,211,102,.08);
+      border: 1px solid rgba(37,211,102,.2);
+      border-radius: var(--radius);
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-top: 4px;
+    }
+
+    .whatsapp-note .wa-icon {
+      font-size: 18px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .whatsapp-note strong { color: var(--white); }
+
+    /* ─── VIDEO WRAP (shared) ──────────────────────────────── */
+    .video-wrap {
+      width: 100%;
+      background: var(--surface);
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: 0 32px 64px rgba(0,0,0,.5);
+    }
+
+    .video-wrap wistia-player {
+      display: block;
+      width: 100%;
+    }
+
+    /* ─── BLOCK 2: HERO VIDEO ──────────────────────────────── */
+    #heroVideo { text-align: center; }
+    #heroVideo h2 { margin-bottom: 12px; }
+    #heroVideo > .container > p {
+      max-width: 480px;
+      margin: 0 auto 36px;
+    }
+
+    /* Chapter pills */
+    .chapters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      margin-top: 24px;
+    }
+
+    .chapter {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 14px;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--muted);
+      cursor: default;
+    }
+
+    .chapter .ch-num {
+      width: 18px; height: 18px;
+      border-radius: 50%;
+      background: var(--accent-dim);
+      color: var(--accent);
+      font-size: 10px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    /* ─── BLOCK 3: BREAKOUT VIDEOS ─────────────────────────── */
+    #breakout { }
+    #breakout .section-intro { text-align: center; margin-bottom: 52px; }
+    #breakout .section-intro h2 { margin-bottom: 12px; }
+    #breakout .section-intro p { max-width: 460px; margin: 0 auto; }
+
+    .breakout-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .breakout-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+
+    .breakout-card:hover { border-color: rgba(108,0,238,.3); }
+
+    .breakout-video { width: 100%; }
+    .breakout-video wistia-player { display: block; width: 100%; }
+
+    .breakout-meta {
+      padding: 20px 22px;
+      border-top: 1px solid var(--border);
+    }
+
+    .breakout-tag {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    .breakout-meta h3 {
+      font-size: 15px;
+      margin-bottom: 6px;
+      color: var(--white);
+    }
+
+    .breakout-meta p {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .breakout-duration {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 11px;
+      color: var(--subtle);
+      margin-top: 10px;
+      font-weight: 600;
+    }
+
+    /* ─── BLOCK 4: SOCIAL PROOF ────────────────────────────── */
+    #proof { text-align: center; }
+    #proof h2 { margin-bottom: 12px; }
+    #proof > .container > p { max-width: 440px; margin: 0 auto 48px; }
+
+    .proof-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      text-align: left;
+    }
+
+    .proof-screenshot {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      cursor: zoom-in;
+      transition: border-color .2s, transform .2s;
+    }
+
+    .proof-screenshot:hover {
+      border-color: rgba(108,0,238,.3);
+      transform: translateY(-2px);
+    }
+
+    .proof-screenshot img {
+      width: 100%;
+      display: block;
+    }
+
+    .proof-screenshot-meta {
+      padding: 14px 18px;
+      border-top: 1px solid var(--border);
+    }
+
+    .proof-screenshot-meta .name {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    .proof-screenshot-meta .result {
+      font-size: 12px;
+      color: var(--accent);
+      font-weight: 600;
+      margin-top: 2px;
+    }
+
+    /* Video testimonial card */
+    .testimonial-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      grid-column: 1 / -1;
+    }
+
+    .testimonial-card wistia-player {
+      display: block;
+      width: 100%;
+    }
+
+    .testimonial-meta {
+      padding: 18px 24px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .t-avatar {
+      width: 38px; height: 38px;
+      border-radius: 50%;
+      background: var(--accent-dim);
+      border: 1px solid rgba(108,0,238,.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .t-name {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: -.01em;
+    }
+
+    .t-role { font-size: 13px; color: var(--muted); margin-top: 1px; }
+    .t-result { font-size: 13px; color: #4ade80; font-weight: 600; margin-top: 2px; }
+
+    /* ─── BLOCK 5: NEXT STEPS ──────────────────────────────── */
+    #nextSteps { background: var(--surface); }
+    #nextSteps .section-intro { margin-bottom: 52px; }
+    #nextSteps .section-intro h2 { margin-bottom: 12px; }
+    #nextSteps .section-intro p { max-width: 460px; }
+
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin-bottom: 48px;
+    }
+
+    .timeline-item {
+      display: flex;
+      gap: 24px;
+      position: relative;
+    }
+
+    .timeline-item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      left: 19px;
+      top: 40px;
+      bottom: -24px;
+      width: 2px;
+      background: var(--border);
+    }
+
+    .timeline-dot {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: var(--surface-2);
+      border: 2px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .timeline-dot.now {
+      background: var(--accent-dim);
+      border-color: rgba(108,0,238,.4);
+    }
+
+    .timeline-content {
+      padding-bottom: 36px;
+      flex: 1;
+    }
+
+    .timeline-when {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+
+    .timeline-content h3 {
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+
+    .timeline-content p {
+      font-size: 14px;
+      color: var(--muted);
+      max-width: 520px;
+    }
+
+    /* ── Expectation cards ── */
+    .expectation-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .expect-card {
+      padding: 28px;
+      border-radius: 14px;
+    }
+
+    .expect-card--yes {
+      background: var(--accent-dim);
+      border: 1px solid rgba(108,0,238,.3);
+    }
+
+    .expect-card--no {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+    }
+
+    .expect-card h3 {
+      font-size: 15px;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .expect-card ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .expect-card li {
+      font-size: 14px;
+      color: var(--muted);
+      padding-left: 20px;
+      position: relative;
+      line-height: 1.6;
+    }
+
+    .expect-card li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 12px;
+    }
+
+    .expect-card--no li::before { color: var(--subtle); }
+
+    /* ─── FOOTER ───────────────────────────────────────────── */
+    footer {
+      padding: 36px 28px;
+      text-align: center;
+      font-size: 12px;
+      color: var(--subtle);
+      border-top: 1px solid var(--border);
+      letter-spacing: .02em;
+    }
+    footer a { color: var(--subtle); text-decoration: none; }
+    footer a:hover { color: var(--white); }
+
+    /* ─── Lightbox ─────────────────────────────────────────── */
+    #lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.88);
+      z-index: 500;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      cursor: zoom-out;
+    }
+    #lightbox.open { display: flex; }
+    #lightbox img {
+      max-width: 100%;
+      max-height: 90vh;
+      border-radius: 12px;
+      box-shadow: 0 40px 80px rgba(0,0,0,.8);
+    }
+
+    /* ─── Responsive ───────────────────────────────────────── */
+    @media (max-width: 640px) {
+      #opening        { padding: 48px 0 60px; }
+      #opening h1     { font-size: 28px; }
+      #opening .sub   { font-size: 15px; }
+      .breakout-grid  { grid-template-columns: 1fr; }
+      .proof-grid     { grid-template-columns: 1fr; }
+      .expectation-grid { grid-template-columns: 1fr; }
+      .section        { padding: 72px 0; }
+      .appt-card      { text-align: left; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     NAV
+══════════════════════════════════════════ -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <svg width="26" height="26" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="sg" x1="50" y1="0" x2="50" y2="100" gradientUnits="userSpaceOnUse">
+            <stop offset="0%"   stop-color="#a78bfa"/>
+            <stop offset="50%"  stop-color="#6C00EE"/>
+            <stop offset="100%" stop-color="#818cf8"/>
+          </linearGradient>
+        </defs>
+        <path d="M50 2 C53 28 72 47 98 50 C72 53 53 72 50 98 C47 72 28 53 2 50 C28 47 47 28 50 2Z" fill="url(#sg)"/>
+      </svg>
+    </a>
+    <div class="nav-status">
+      <span class="dot"></span>
+      Gesprek bevestigd
+    </div>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════════
+     BLOCK 1 — OPENING
+══════════════════════════════════════════ -->
+<section id="opening">
+  <div class="container">
+    <div class="confirm-badge">
+      ✓ &nbsp;Gesprek ingepland
+    </div>
+    <h1>Je gesprek staat ingepland.</h1>
+    <p class="sub">
+      Hieronder vind je alles wat je nodig hebt om er maximaal uit te halen.
+      Neem 5 minuten de tijd — het loont.
+    </p>
+
+    <!-- Hero video -->
+    <div class="video-wrap" style="margin-bottom: 40px;">
+      <wistia-player media-id="r3xb3oxmjf" aspect="1.7777777777777777"></wistia-player>
+    </div>
+
+    <!-- Appointment details card -->
+    <div class="appt-card">
+      <div class="appt-card-header">
+        📅 &nbsp;Jouw afspraakdetails
+      </div>
+      <div class="appt-card-body">
+        <div class="appt-row">
+          <div class="appt-icon">🗓</div>
+          <div>
+            <div class="appt-value" id="apptDatetime">Bekijk je afspraakbevestiging per e-mail</div>
+          </div>
+        </div>
+        <div class="appt-divider"></div>
+        <div class="appt-row">
+          <div class="appt-icon">📞</div>
+          <div>
+            <div class="appt-value">Google Meet · link staat in de kalenderuitnodiging</div>
+          </div>
+        </div>
+        <div class="appt-divider"></div>
+        <div class="appt-row">
+          <div class="appt-icon">⏱</div>
+          <div>
+            <div class="appt-value">30 minuten</div>
+          </div>
+        </div>
+        <div class="appt-divider"></div>
+        <div class="whatsapp-note">
+          <span class="wa-icon">💬</span>
+          <div>
+            Een van onze teamleden neemt voor het gesprek contact met je op.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     BLOCK 3 — BREAKOUT VIDEOS
+══════════════════════════════════════════ -->
+<!-- TODO: remove style="display:none" once breakout videos are ready -->
+<section id="breakout" class="section" style="display:none">
+  <div class="container">
+    <div class="section-intro">
+      <span class="label">Verdieping</span>
+      <h2>Meer vragen? We behandelen ze hier.</h2>
+      <p>Elk video beantwoordt één vraag volledig. De eerste 60 seconden geven je het antwoord — de rest gaat dieper.</p>
+    </div>
+
+    <div class="breakout-grid">
+
+      <!-- Breakout 1 -->
+      <div class="breakout-card">
+        <div class="breakout-video">
+          <!-- REPLACE: swap BREAKOUT_VIDEO_1_ID -->
+          <wistia-player media-id="BREAKOUT_VIDEO_1_ID" aspect="1.7777777777777777"></wistia-player>
+        </div>
+        <div class="breakout-meta">
+          <div class="breakout-tag">Investering</div>
+          <h3>Wat kost het precies — en wanneer verdien ik het terug?</h3>
+          <p>Een concrete uitleg van de investering, terugverdientijd per sector, en waarom dit geen advertentiebudget is.</p>
+          <div class="breakout-duration">⏱ 3–4 min</div>
+        </div>
+      </div>
+
+      <!-- Breakout 2 -->
+      <div class="breakout-card">
+        <div class="breakout-video">
+          <!-- REPLACE: swap BREAKOUT_VIDEO_2_ID -->
+          <wistia-player media-id="BREAKOUT_VIDEO_2_ID" aspect="1.7777777777777777"></wistia-player>
+        </div>
+        <div class="breakout-meta">
+          <div class="breakout-tag">De AI</div>
+          <h3>Hoe werkt de AI precies — merkt mijn klant dat het een bot is?</h3>
+          <p>Wat de AI doet, wat hij niet doet, en waarom jouw klant altijd met een echt mens sluit.</p>
+          <div class="breakout-duration">⏱ 3–4 min</div>
+        </div>
+      </div>
+
+      <!-- Breakout 3 -->
+      <div class="breakout-card">
+        <div class="breakout-video">
+          <!-- REPLACE: swap BREAKOUT_VIDEO_3_ID -->
+          <wistia-player media-id="BREAKOUT_VIDEO_3_ID" aspect="1.7777777777777777"></wistia-player>
+        </div>
+        <div class="breakout-meta">
+          <div class="breakout-tag">Risico</div>
+          <h3>Wat als het niet werkt?</h3>
+          <p>De Vanguard Garantie uitgelegd — inclusief wat er in de eerste 30 dagen van jou is, ongeacht het resultaat.</p>
+          <div class="breakout-duration">⏱ 2–3 min</div>
+        </div>
+      </div>
+
+      <!-- Breakout 4 -->
+      <div class="breakout-card">
+        <div class="breakout-video">
+          <!-- REPLACE: swap BREAKOUT_VIDEO_4_ID -->
+          <wistia-player media-id="BREAKOUT_VIDEO_4_ID" aspect="1.7777777777777777"></wistia-player>
+        </div>
+        <div class="breakout-meta">
+          <div class="breakout-tag">Tijdlijn</div>
+          <h3>Hoe zien de eerste 60 dagen eruit?</h3>
+          <p>Week voor week: van onboarding tot eerste afspraken tot systeem op kruissnelheid. Zodat je weet wat je te wachten staat.</p>
+          <div class="breakout-duration">⏱ 3 min</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     BLOCK 4 — SOCIAL PROOF
+     NOTE: only show this section once you have 3+ real testimonials.
+     Currently showing 1 video testimonial. Add screenshot testimonials
+     below as .proof-screenshot cards once you have them.
+══════════════════════════════════════════ -->
+<section id="proof" class="section">
+  <div class="container">
+    <span class="label">Resultaten</span>
+    <h2>Anderen gingen je voor</h2>
+    <p>Geen verzonnen quotes. Echte mensen, meetbare resultaten.</p>
+
+    <div class="proof-grid">
+
+      <!-- Video testimonial (full width) -->
+      <div class="testimonial-card">
+        <!-- REPLACE: swap with your real testimonial Wistia ID -->
+        <wistia-player media-id="4eda68ytaw" aspect="1.7777777777777777"></wistia-player>
+        <div class="testimonial-meta">
+          <div class="t-avatar">F</div>
+          <div>
+            <div class="t-name">Frank</div>
+            <div class="t-role">Eigenaar · Zitcomfort</div>
+            <!-- REPLACE: add concrete result once known -->
+            <div class="t-result">↑ Structureel meer afspraken via het systeem</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ADD MORE: paste .proof-screenshot cards here once you have WhatsApp/email screenshots -->
+      <!--
+      <div class="proof-screenshot" onclick="openLightbox(this)">
+        <img src="screenshots/naam-screenshot.png" alt="Testimonial van Naam" />
+        <div class="proof-screenshot-meta">
+          <div class="name">Naam · Sector</div>
+          <div class="result">11 afspraken in de eerste 4 weken</div>
+        </div>
+      </div>
+      -->
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     BLOCK 5 — NEXT STEPS
+══════════════════════════════════════════ -->
+<section id="nextSteps" class="section">
+  <div class="container">
+    <div class="section-intro">
+      <span class="label">Wat nu</span>
+      <h2>Wat er de komende uren en dagen gebeurt</h2>
+      <p>Geen verrassingen. Dit is exact wat je kunt verwachten.</p>
+    </div>
+
+    <!-- Expectation cards -->
+    <div class="expectation-grid">
+      <div class="expect-card expect-card--yes">
+        <h3><span>✅</span> Wat je kunt verwachten</h3>
+        <ul>
+          <li>Een eerlijk beeld van wat het systeem voor jouw situatie kan doen</li>
+          <li>Concrete cijfers: verwachte afspraken, terugverdientijd per sector</li>
+          <li>Duidelijkheid over de samenwerking — inclusief wat het kost</li>
+          <li>Antwoord op elke vraag die je nog hebt</li>
+        </ul>
+      </div>
+      <div class="expect-card expect-card--no">
+        <h3><span>✗</span> Wat je niet hoeft te verwachten</h3>
+        <ul>
+          <li>Geen verkoopdruk of kunstmatige schaarste</li>
+          <li>Geen vage beloftes zonder onderbouwing</li>
+          <li>Geen beslissing die je ter plekke moet nemen</li>
+          <li>Als het systeem niet bij je past, zeg ik dat gewoon</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════ -->
+<footer>
+  <p>
+    © 2026 Innovaigency ·
+    <a href="#">Privacy</a> ·
+    <a href="#">KVK: XXXXXXXX</a>
+  </p>
+</footer>
+
+<!-- ── Lightbox for screenshot testimonials ── -->
+<div id="lightbox" onclick="closeLightbox()">
+  <img id="lightboxImg" src="" alt="" />
+</div>
+
+<script>
+  function openLightbox(card) {
+    const img = card.querySelector('img');
+    document.getElementById('lightboxImg').src = img.src;
+    document.getElementById('lightboxImg').alt = img.alt;
+    document.getElementById('lightbox').classList.add('open');
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+  }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+</script>
+
+</body>
+</html>
